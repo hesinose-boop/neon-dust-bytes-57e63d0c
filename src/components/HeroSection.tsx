@@ -19,8 +19,8 @@ const HeroSection = () => {
           loop
           playsInline
           poster={heroBg}
-          className="w-full h-full object-cover scale-110"
-        >
+          className="w-full h-full object-cover scale-110">
+          
           <source src="/video/hero-bg.mp4" type="video/mp4" />
         </video>
       </motion.div>
@@ -31,28 +31,28 @@ const HeroSection = () => {
 
       {/* Floating particles */}
       <div className="particle-container z-10">
-        {Array.from({ length: 30 }).map((_, i) => (
-          <motion.div
-            key={i}
-            className="absolute rounded-full bg-primary/30"
-            style={{
-              width: Math.random() * 4 + 1,
-              height: Math.random() * 4 + 1,
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-            }}
-            animate={{
-              y: [0, -100 - Math.random() * 200],
-              opacity: [0, 0.8, 0],
-            }}
-            transition={{
-              duration: 6 + Math.random() * 8,
-              repeat: Infinity,
-              delay: Math.random() * 5,
-              ease: "linear",
-            }}
-          />
-        ))}
+        {Array.from({ length: 30 }).map((_, i) =>
+        <motion.div
+          key={i}
+          className="absolute rounded-full bg-primary/30"
+          style={{
+            width: Math.random() * 4 + 1,
+            height: Math.random() * 4 + 1,
+            left: `${Math.random() * 100}%`,
+            top: `${Math.random() * 100}%`
+          }}
+          animate={{
+            y: [0, -100 - Math.random() * 200],
+            opacity: [0, 0.8, 0]
+          }}
+          transition={{
+            duration: 6 + Math.random() * 8,
+            repeat: Infinity,
+            delay: Math.random() * 5,
+            ease: "linear"
+          }} />
+
+        )}
       </div>
 
       {/* Content */}
@@ -62,8 +62,8 @@ const HeroSection = () => {
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.3, duration: 0.6 }}
-            className="font-mono text-sm md:text-base text-primary tracking-[0.3em] uppercase mb-4"
-          >
+            className="font-mono text-sm md:text-base text-primary tracking-[0.3em] uppercase mb-4">
+            
             Open World Survival Game
           </motion.p>
 
@@ -71,8 +71,8 @@ const HeroSection = () => {
             initial={{ opacity: 0, x: -40 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.5, duration: 0.8 }}
-            className="font-display text-4xl md:text-6xl lg:text-7xl font-black uppercase leading-[0.95] mb-6"
-          >
+            className="font-display text-4xl md:text-6xl lg:text-7xl font-black uppercase leading-[0.95] mb-6">
+            
             <span className="text-foreground">Survive the</span>
             <br />
             <span className="text-glow-cyan text-primary">Contamination.</span>
@@ -85,8 +85,8 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.8, duration: 0.6 }}
-            className="font-body text-lg md:text-xl text-muted-foreground max-w-xl mb-8 leading-relaxed"
-          >
+            className="font-body text-lg md:text-xl text-muted-foreground max-w-xl mb-8 leading-relaxed">
+            
             Enter a corrupted world where survival means adapting, fighting, and building a future among chaos.
           </motion.p>
 
@@ -94,32 +94,32 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1, duration: 0.6 }}
-            className="flex flex-col sm:flex-row gap-4 items-start"
-          >
+            className="flex flex-col sm:flex-row gap-4 items-start">
+            
             <a
               href="https://to.wendiro.com/u?k=24c3cf9a5dde4dd896352d1314e9aacd&via=16281"
               target="_blank"
               rel="noopener noreferrer"
-              className="group relative bg-gradient-cta font-display text-sm md:text-base font-bold uppercase tracking-wider px-8 py-4 text-primary-foreground animate-pulse-glow hover:scale-105 transition-transform flex items-center gap-3"
-            >
+              className="group relative bg-gradient-cta font-display text-sm md:text-base font-bold uppercase tracking-wider px-8 py-4 text-primary-foreground animate-pulse-glow hover:scale-105 transition-transform flex items-center gap-3">
+              
               <Monitor className="w-5 h-5" />
               Download Now — Free to Play
             </a>
           </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 1.3 }}
-            className="flex items-center gap-6 mt-8 text-muted-foreground font-mono text-xs tracking-wider"
-          >
-            <span className="flex items-center gap-2">
-              <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-              50M+ Players
-            </span>
-            <span>PC • Mobile</span>
-            <span>⭐ 4.5/5</span>
-          </motion.div>
+          
+
+
+
+
+
+
+
+
+
+
+
+          
         </div>
       </motion.div>
 
@@ -128,13 +128,13 @@ const HeroSection = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 2 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-2 text-muted-foreground"
-      >
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-2 text-muted-foreground">
+        
         <span className="font-mono text-[10px] tracking-[0.3em] uppercase">Scroll</span>
         <ChevronDown className="w-5 h-5 scroll-indicator" />
       </motion.div>
-    </section>
-  );
+    </section>);
+
 };
 
 export default HeroSection;
