@@ -48,7 +48,7 @@ const CTASection = () => {
             Download Once Human now and enter a world where humanity fights for survival.
           </p>
           <a
-            href="https://store.steampowered.com/app/2139460/Once_Human/"
+            href="https://to.wendiro.com/u?k=24c3cf9a5dde4dd896352d1314e9aacd&via=16281"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-3 bg-gradient-cta font-display text-sm md:text-base font-bold uppercase tracking-wider px-10 py-5 text-primary-foreground animate-pulse-glow hover:scale-105 transition-transform"
